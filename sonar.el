@@ -1,4 +1,4 @@
-;;; sonar.el -- Provides sonar cloud integration.  -*- lexical-binding: t; -*-
+;;; sonar.el --- Provides sonar cloud integration.  -*- lexical-binding: t; -*-
 
 ;; Copyright (C) 2019 Damien Merenne <dam@cosinux.org>
 
