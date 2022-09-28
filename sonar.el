@@ -111,11 +111,11 @@
   "Execute a get request to PATHS using request SETTINGS."
   (apply #'sonar-request "GET" paths settings))
 
-(defun sonar-quality-gates-project-status (organization repo &optional branch &rest settings)
-  "Fetch project status for ORGANIZATION and REPO."
+(defun sonar-quality-gates-project-status (organization project-key &optional branch &rest settings)
+  "Fetch project status for ORGANIZATION and PROJECT-KEY."
   (let ((params
          `(("organization" . ,organization)
-           ("projectKey" . ,(format "%s_%s" organization repo))
+           ("projectKey" . ,project-key)
            ("branch" . ,(or branch "master")))))
     (apply #'sonar-get '("qualitygates" "project_status") :params params settings)))
 
